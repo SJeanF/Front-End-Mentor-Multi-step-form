@@ -1,0 +1,52 @@
+@use "../configs/colors";
+@use "../configs/fonts";
+
+.addons-check {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  margin-bottom: 15px;
+  border: 1px solid colors.$Grey-500;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &:hover {
+    border-color: colors.$Purple-600;
+  }
+
+  &__check-container {
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__input {
+      width: 18px;
+      height: 18px;
+      accent-color: colors.$Purple-600;
+    }
+  }
+
+  &__texts {
+    &__tittle {
+      @include fonts.blueText();
+    }
+
+    &__description {
+      @include fonts.grayText();
+    }
+  }
+
+  &__val {
+    margin-left: auto;
+    margin-right: 30px;
+    &__num {
+      @include fonts.bodyFont(500);
+      color: colors.$Purple-600;
+    }
+  }
+
+  &:has(input[type="checkbox"]:checked) {
+    border-color: colors.$Purple-600;
+  }
+}

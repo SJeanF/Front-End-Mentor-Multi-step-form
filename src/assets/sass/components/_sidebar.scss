@@ -1,0 +1,49 @@
+@use "../configs/colors";
+@use "../configs/fonts";
+.sidebar {
+  background-image: url("../images/bg-sidebar-desktop.svg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 25px;
+
+  &__item {
+    display: flex;
+    margin-bottom: 20px;
+    text-decoration: none;
+    .num-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 35px;
+      width: 35px;
+      margin-right: 20px;
+      border: 2px solid colors.$Blue-200;
+      border-radius: 50%;
+      color: colors.$Blue-200;
+      @include fonts.bodyFont(500);
+      text-decoration: none;
+    }
+    .sidebar__item__texts {
+      .step-text {
+        @include fonts.bodyFont(400, 12px);
+        line-height: 15px;
+        color: colors.$Blue-100;
+        text-transform: uppercase;
+        opacity: 75%;
+      }
+      .step-type {
+        @include fonts.bodyFont(700, 14px);
+        color: colors.$Blue-100;
+        text-transform: uppercase;
+      }
+    }
+
+    &--is-active {
+      .num-icon {
+        background-color: colors.$Blue-200;
+        color: colors.$Blue-950;
+      }
+    }
+  }
+}

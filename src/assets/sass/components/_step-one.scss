@@ -1,0 +1,48 @@
+@use "../configs/colors";
+@use "../configs/fonts";
+
+.step-one {
+  &__main {
+    &__text-area {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      &__texts {
+        display: flex;
+        justify-content: space-between;
+
+        &__label {
+          color: colors.$Blue-950;
+          margin-bottom: 5px;
+        }
+
+        &__alert {
+          display: none;
+          color: colors.$Red-500;
+          @include fonts.bodyFont(500, 14px);
+
+          &--field-required {
+            display: block;
+          }
+        }
+      }
+
+      &__input {
+        padding: 10px;
+        border: 1px solid colors.$Purple-200;
+        border-radius: 8px;
+
+        &:focus {
+          outline: 1px solid colors.$Purple-600;
+        }
+        &--field-required {
+          outline: 1px solid colors.$Red-500;
+        }
+      }
+    }
+  }
+  &__footer {
+    justify-content: end !important;
+  }
+}

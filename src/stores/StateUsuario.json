@@ -1,0 +1,29 @@
+{
+  "name": "João Silva",
+  "email": "joaosilva@gmail.com",
+  "plan": {
+    "tittle": "Pro",
+    "val": 15,
+    "yearly": false
+  },
+  "addons": [
+    {
+      "id": 0,
+      "tittle": "Online service",
+      "description": "Access to multiplayer games",
+      "val": 1
+    },
+    {
+      "id": 1,
+      "tittle": "Larger storage",
+      "description": "Extra 1TB of cloud save",
+      "val": 2
+    },
+    {
+      "id": 2,
+      "tittle": "Customizable Profile",
+      "description": "Custom theme on your profile",
+      "val": 2
+    }
+  ]
+}

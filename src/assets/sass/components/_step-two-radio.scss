@@ -1,0 +1,40 @@
+@use "../configs/colors";
+@use "../configs/fonts";
+
+.radio-container {
+  padding: 20px 15px 25px;
+  border: 1px solid colors.$Purple-200;
+  border-radius: 8px;
+  cursor: pointer;
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  &:has(input[type="radio"]:checked) {
+    border-color: colors.$Purple-600;
+  }
+
+  &__image-container {
+    margin-bottom: 35px;
+  }
+
+  &:hover {
+    border-color: colors.$Purple-600;
+  }
+
+  &__texts {
+    &__plan {
+      @include fonts.blueText(700);
+    }
+
+    &__val {
+      @include fonts.grayText();
+    }
+
+    &__month-free {
+      @include fonts.blueText();
+      margin-top: 5px;
+    }
+  }
+}

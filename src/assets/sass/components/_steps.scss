@@ -1,0 +1,34 @@
+@use "../configs/colors";
+@use "../configs/fonts";
+@use "./nav-buttons";
+@use "./step-one";
+@use "./step-two";
+@use "./step-three";
+@use "./step-four";
+@use "./step-five";
+
+.steps {
+  padding: 40px 100px;
+  display: flex;
+  flex-direction: column;
+  &__header {
+    &__tittle {
+      @include fonts.blueText(700, 32px);
+    }
+
+    &__subtittle {
+      @include fonts.grayText(400, 17px);
+      word-spacing: 1px;
+    }
+  }
+
+  &__main {
+    margin-top: 30px;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+}

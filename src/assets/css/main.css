@@ -1,0 +1,413 @@
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap);
+.sidebar {
+  background-image: url("../images/bg-sidebar-desktop.svg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 25px;
+}
+.sidebar__item {
+  display: flex;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+.sidebar__item .num-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  margin-right: 20px;
+  border: 2px solid #bfe2fd;
+  border-radius: 50%;
+  color: #bfe2fd;
+  font-family: Ubuntu, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.sidebar__item .sidebar__item__texts .step-text {
+  font-family: Ubuntu, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #f0f5ff;
+  text-transform: uppercase;
+  opacity: 75%;
+}
+.sidebar__item .sidebar__item__texts .step-type {
+  font-family: Ubuntu, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #f0f5ff;
+  text-transform: uppercase;
+}
+.sidebar__item--is-active .num-icon {
+  background-color: #bfe2fd;
+  color: #02295a;
+}
+
+.next-step-button {
+  background-color: #02295a;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.go-back-button {
+  text-decoration: none;
+  color: #02295a;
+  padding: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.step-one__main__text-area {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.step-one__main__text-area__texts {
+  display: flex;
+  justify-content: space-between;
+}
+.step-one__main__text-area__texts__label {
+  color: #02295a;
+  margin-bottom: 5px;
+}
+.step-one__main__text-area__texts__alert {
+  display: none;
+  color: #ed3548;
+  font-family: Ubuntu, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+.step-one__main__text-area__texts__alert--field-required {
+  display: block;
+}
+.step-one__main__text-area__input {
+  padding: 10px;
+  border: 1px solid #d6d9e6;
+  border-radius: 8px;
+}
+.step-one__main__text-area__input:focus {
+  outline: 1px solid #473dff;
+}
+.step-one__main__text-area__input--field-required {
+  outline: 1px solid #ed3548;
+}
+.step-one__footer {
+  justify-content: end !important;
+}
+
+.radio-container {
+  padding: 20px 15px 25px;
+  border: 1px solid #d6d9e6;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.radio-container input[type=radio] {
+  display: none;
+}
+.radio-container:has(input[type=radio]:checked) {
+  border-color: #473dff;
+}
+.radio-container__image-container {
+  margin-bottom: 35px;
+}
+.radio-container:hover {
+  border-color: #473dff;
+}
+.radio-container__texts__plan {
+  font-family: Ubuntu, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #02295a;
+}
+.radio-container__texts__val {
+  font-family: Ubuntu, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #9699ab;
+}
+.radio-container__texts__month-free {
+  font-family: Ubuntu, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #02295a;
+  margin-top: 5px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+  margin: 0 40px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch input:checked + .slider {
+  background-color: #02295a;
+}
+.switch input:checked + .slider::before {
+  transform: translateX(22px);
+}
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #adbeff;
+}
+.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #adbeff;
+  border-radius: 34px;
+  transition: 0.4s;
+}
+.switch .slider::before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  top: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.step-two__main .radio-list-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  grid-gap: 2%;
+}
+.step-two .switch-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  padding: 10px 0;
+  background-color: #f0f5ff;
+}
+.step-two .switch-container .monthly {
+  font-family: Ubuntu, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #9699ab;
+}
+.step-two .switch-container .monthly--is-active {
+  font-family: Ubuntu, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #02295a;
+}
+.step-two .switch-container .yearly {
+  font-family: Ubuntu, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #9699ab;
+}
+.step-two .switch-container .yearly--is-active {
+  font-family: Ubuntu, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #02295a;
+}
+
+.addons-check {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  margin-bottom: 15px;
+  border: 1px solid #9699ab;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.addons-check:hover {
+  border-color: #473dff;
+}
+.addons-check__check-container {
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.addons-check__check-container__input {
+  width: 18px;
+  height: 18px;
+  accent-color: #473dff;
+}
+.addons-check__texts__tittle {
+  font-family: Ubuntu, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #02295a;
+}
+.addons-check__texts__description {
+  font-family: Ubuntu, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #9699ab;
+}
+.addons-check__val {
+  margin-left: auto;
+  margin-right: 30px;
+}
+.addons-check__val__num {
+  font-family: Ubuntu, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #473dff;
+}
+.addons-check:has(input[type=checkbox]:checked) {
+  border-color: #473dff;
+}
+
+.main-plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d6d9e6;
+}
+.main-plan__texts__plan {
+  font-family: Ubuntu, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #02295a;
+  margin-bottom: 6px;
+}
+.main-plan__texts__change {
+  font-family: Ubuntu, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #9699ab;
+}
+.main-plan__val {
+  font-family: Ubuntu, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #02295a;
+}
+
+.addon {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 10px;
+}
+.addon__name {
+  font-family: Ubuntu, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #9699ab;
+}
+.addon__val {
+  font-family: Ubuntu, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #02295a;
+}
+.addon__val--is-total {
+  font-weight: 700;
+  color: #473dff;
+}
+
+.step-four__main__prices {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f0f5ff;
+}
+.step-four__main__total-container {
+  padding: 0 20px;
+}
+
+.step-five__main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.step-five__main__img {
+  margin-bottom: 40px;
+}
+.step-five__main__tittle {
+  font-family: Ubuntu, sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: #02295a;
+  margin-bottom: 20px;
+}
+.step-five__main__description {
+  font-family: Ubuntu, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #9699ab;
+  text-align: center;
+}
+
+.steps {
+  padding: 40px 100px;
+  display: flex;
+  flex-direction: column;
+}
+.steps__header__tittle {
+  font-family: Ubuntu, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #02295a;
+}
+.steps__header__subtittle {
+  font-family: Ubuntu, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: #9699ab;
+  word-spacing: 1px;
+}
+.steps__main {
+  margin-top: 30px;
+}
+.steps__footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Ubuntu, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#app {
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f5ff;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  width: 950px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+/*# sourceMappingURL=main.css.map */

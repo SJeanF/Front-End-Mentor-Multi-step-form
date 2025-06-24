@@ -1,0 +1,39 @@
+@use "step-two-radio";
+@use "step-two-switch";
+@use "../configs/colors";
+@use "../configs/fonts";
+
+.step-two {
+  &__main {
+    .radio-list-container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 32%);
+      grid-gap: 2%;
+    }
+  }
+  .switch-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding: 10px 0;
+    background-color: colors.$Blue-100;
+
+    .monthly {
+      @include fonts.grayText(500);
+
+      &--is-active {
+        @include fonts.blueText(500);
+      }
+    }
+
+    .yearly {
+      @include fonts.grayText(500);
+
+      &--is-active {
+        @include fonts.blueText(500);
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@use "../configs/colors";
+@use "../configs/fonts";
+
+.next-step-button {
+  background-color: colors.$Blue-950;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: colors.$White;
+  text-decoration: none;
+}
+
+.go-back-button {
+  text-decoration: none;
+  color: colors.$Blue-950;
+  padding: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}

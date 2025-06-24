@@ -1,0 +1,24 @@
+@use "../configs/colors";
+@use "../configs/fonts";
+
+.main-plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid colors.$Purple-200;
+  &__texts {
+    &__plan {
+      @include fonts.blueText(500, 18px);
+      margin-bottom: 6px;
+    }
+
+    &__change {
+      @include fonts.grayText();
+    }
+  }
+
+  &__val {
+    @include fonts.blueText(700);
+  }
+}

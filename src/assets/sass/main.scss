@@ -1,0 +1,29 @@
+@use "configs/colors";
+@use "configs/fonts";
+@use "components/sidebar";
+@use "components/steps";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  @include fonts.bodyFont;
+}
+
+#app {
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: colors.$Blue-100;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  width: 950px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: colors.$White;
+}

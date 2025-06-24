@@ -1,0 +1,17 @@
+@use "step-four-main-plan";
+@use "step-four-text-val";
+@use "../configs/colors";
+
+.step-four {
+  &__main {
+    &__prices {
+      padding: 20px;
+      border-radius: 8px;
+      background-color: colors.$Blue-100;
+    }
+
+    &__total-container {
+      padding: 0 20px;
+    }
+  }
+}
